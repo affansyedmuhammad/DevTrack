@@ -15,7 +15,10 @@ Make sure you have the following software installed on your system:
 
 - Node.js (version 12 or above)
 - npm (Node Package Manager)
-- Mysql version 8.0.4
+- Mysql version 5
+
+Installer for windows is added in the root folder of project.
+When installing MySql server, make sure to install with "Use Legacy Authentication Method (Retain MySQL 5.x Compatibility)"
 
 ## Installation
 
