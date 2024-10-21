@@ -47,15 +47,14 @@ app.post('/login',(req,res)=>{
         database:"devtrack_db"
     });
     con.connect(function(err){if(err) throw err;
-con.query("select password from user where username='"+username+"'",function(err,result,fields){
-    if(password==result[0].password){
+    con.query("select password from user where username='"+username+"'",function(err,result,fields){
+        if(result != null && result.length > 0 && password==result[0].password){
         res.redirect("http://localhost:3000/users?username="+username)
-    
-}
-else{
-    res.redirect('http://localhost:3000/invalid');
-}
-});
+        }
+        else{
+            res.redirect('http://localhost:3000/invalid');
+        }
+    });
     
     
     });
