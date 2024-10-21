@@ -42,13 +42,10 @@ Make sure you have the following software installed on your system:
 INSERT INTO user (username,email, password) VALUES ('testuser', 'testuser@devtrack.test', 'password123');
 
 -Seed the table 'tasks' with dummy task
-INSERT INTO tasks (username, password) VALUES ('testuser', 'password123');
+INSERT INTO tasks (username, password, task) VALUES ('testuser', 'password123', '2024-10-10');
 
 
 3.
-
-
-
 
 ## Usage
 
@@ -62,7 +59,7 @@ INSERT INTO tasks (username, password) VALUES ('testuser', 'password123');
 
 
 
-## Reference sites to dwonload files
+## Reference sites to download files
 
 - [Node.js](https://nodejs.org/)
 - [React.js](https://reactjs.org/)
