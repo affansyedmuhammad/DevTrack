@@ -1,0 +1,19 @@
+CREATE DATABASE devtrack_db;
+
+CREATE TABLE user (
+    username VARCHAR(255) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE tasks (
+    username VARCHAR(255),
+    task VARCHAR(255),
+    date VARCHAR(255),
+    FOREIGN KEY (username) REFERENCES user(username)
+);
+
+-- Seed the tables with dummy data
+INSERT INTO user (username, email, password) VALUES ('testuser', 'testuser@devtrack.test', 'test1234');
+
+INSERT INTO tasks (username, task, date) VALUES ('testuser', 'Complete DevTrack feature', '2024-10-10');

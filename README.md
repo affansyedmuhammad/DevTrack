@@ -45,8 +45,6 @@ INSERT INTO user (username,email, password) VALUES ('testuser', 'testuser@devtra
 INSERT INTO tasks (username, password, task) VALUES ('testuser', 'password123', '2024-10-10');
 
 
-3.
-
 ## Usage
 
 1. Start the backend server:
