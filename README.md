@@ -1,6 +1,6 @@
 # DevTrack – Developer Feature Assignment System
 
-DevTrack is a web-based ticketing and feature assignment system for managing and tracking tasks within software development teams. The system allows product managers to create, assign, and monitor tasks while enabling engineers and QA testers to update and track their progress on these tasks.
+DevTrack is a web-based task managment tool for managing and tracking tasks within software development teams.
 
 ## Table of Contents
 
