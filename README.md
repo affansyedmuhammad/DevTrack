@@ -24,29 +24,7 @@ When installing MySql server, make sure to install with "Use Legacy Authenticati
 
 1. Navigate to the project directory: DevTrack and install dependencies using npm install
 
-2. To create the database and tables, use following commands:
-
-  -CREATE DATABASE devtrack_db;
-
- -CREATE TABLE user (
-    username VARCHAR(255) PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
-
--CREATE TABLE tasks (
-    username VARCHAR(255),
-    task VARCHAR(255),
-    date VARCHAR(255),
-    FOREIGN KEY (username) REFERENCES user(username)
-);
-
--Seed the table 'user' with user data
-INSERT INTO user (username,email, password) VALUES ('testuser', 'testuser@devtrack.test', 'password123');
-
--Seed the table 'tasks' with dummy task
-INSERT INTO tasks (username, password, task) VALUES ('testuser', 'password123', '2024-10-10');
-
+2. To create the database and tables, use commands provided in DBScript.txt file.
 
 ## Usage
 
