@@ -23,15 +23,15 @@ Make sure you have the following software installed on your system:
 
 2. To create the database and tables, use following commands:
 
- CREATE DATABASE devtrack_db;
+  -CREATE DATABASE devtrack_db;
 
- CREATE TABLE user (
+ -CREATE TABLE user (
     username VARCHAR(255) PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE tasks (
+-CREATE TABLE tasks (
     username VARCHAR(255),
     task VARCHAR(255),
     date VARCHAR(255),
