@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CryptoJS from 'crypto-js';
+import sha256 from 'crypto-js/sha256';
 
 const Createacc = () => {
     const [username, setusername] = useState("");
@@ -37,6 +39,20 @@ const Createacc = () => {
             setError("Passwords do not match.");
             return;
         }
+        const secretKey = "ENPM680Fall2024Project-smaffan-devtracksecretkey";
+
+        const hashedPassword = sha256(`${password}`).toString();
+        setpassword(hashedPassword);
+
+        const hashedConfirmedPassword = sha256(`${confirmpassword}`).toString();
+        setconfirmpassword(hashedConfirmedPassword);
+
+
+        // const encPassword = CryptoJS.AES.encrypt(`${password}`, secretKey); 
+        // setpassword(encPassword);
+
+        // const encConfirmPassword = CryptoJS.AES.encrypt(`${confirmpassword}`, secretKey); 
+        // setconfirmpassword(encConfirmPassword);
 
         setError(""); // Clear any previous errors
     };

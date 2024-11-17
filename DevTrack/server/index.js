@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import mysql from 'mysql';
 import fs from 'fs'; // Required to log errors to a file
+import CryptoJS from 'crypto-js';
 
 const app = express();
 app.use(cors());
@@ -85,8 +86,7 @@ app.post('/login', (req, res) => {
                 logErrorToFile(err);
                 return res.status(500).send("Internal Server Error");
             }
-
-            if (result.length > 0 && result[0].password === password) {
+            if (result.length > 0 && result[0].password === CryptoJS.SHA256(password).toString()) {
                 res.redirect(`http://localhost:3000/users?username=${username}`);
             } else {
                 res.redirect('http://localhost:3000/invalid');
